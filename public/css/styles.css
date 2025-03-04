@@ -5,14 +5,181 @@
   font-style: normal;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .alt-font-kaushan {
-  font-family: "Kaushan Script", serif;
+  font-family: "Kaushan Script", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
 .alt-font-knewave {
-  font-family: "Knewave", serif;
+  font-family: "Knewave", sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  background-color: #ffb770;
+  margin: 0;
+  padding: 10px;
+  min-height: 70px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+}
+
+.menu > div {
+  min-height: 60px;
+}
+
+.links-menu {
+  display: flex;
+  list-style: none;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.links-menu a,
+.link-menu button {
+  text-decoration: none;
+  color: #000;
+  background-color: #ffd7b0;
+  padding: 10px;
+  border-radius: 12px;
+  font-family: "Knewave", sans-serif;
+  /* font-family: "Kaushan Script", sans-serif; */
+  font-size: 1.4rem;
+  min-width: 150px;
+  height: 100%;
+  text-align: center;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  font-size: 12pt;
+}
+
+.search-bar input {
+  padding: 0 10px;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  border: none;
+  font-family: "Urbanist", sans-serif;
+  font-size: 1.4em;
+  height: 100%;
+}
+
+.search-btn {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  background-color: #ffd7b0;
+  font-size: 1.6em;
+  cursor: pointer;
+  border: none;
+  height: 100%;
+}
+
+/* Hover */
+
+.links-menu a:hover,
+.links-menu a:focus,
+.links-menu button:hover,
+.links-menu button:focus,
+.search-btn:focus,
+.search-btn:hover,
+.icons-menu a:hover,
+.icons-menu a:focus,
+.icons-menu button:hover,
+.icons-menu button:focus {
+  background-color: #db9e60;
+}
+
+.icons-menu a,
+.icons-menu button {
+  text-decoration: none;
+  color: #000;
+  background-color: #ffd7b0;
+  padding: 10px;
+  border-radius: 12px;
+  cursor: pointer;
+  height: fit-content;
+  width: fit-content;
+}
+
+.icons-menu {
+  display: flex;
+  gap: 10px;
+  font-size: 2rem;
+}
+
+.burger-menu {
+  display: none;
+  font-size: 4rem;
+  cursor: pointer;
+}
+
+/* Responsive styles */
+
+@media (max-width: 1024px) {
+  .menu {
+    display: none;
+  }
+
+  .burger-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    height: 100%;
+  }
+
+  .menu.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100px; /* Adjust based on your header height */
+    width: 100%;
+    background-color: #ffb770;
+    padding: 10px;
+  }
+
+  .links-menu {
+    flex-direction: column;
+  }
+
+  .search-bar {
+    display: flex;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .icons-menu {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+  }
 }

@@ -4,37 +4,53 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gato Calavera</title>
+    <link rel="icon" href="./imgs/gatoCalaveraIcon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Knewave&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
+
   <body>
     <!-- Header -->
-    <header>
+    <header class="header">
       <div class="logo">
         <a href="/">
-          <img src="./imgs/gatoCalavera.svg" width="100" alt="Wonejo Rosa" />
+          <img src="./imgs/gatoCalaveraIcon.svg" width="100" alt="Wonejo Rosa" />
         </a>
       </div>
 
-      <nav>
-        <ul>
-          <li><a href="/">Inicio</a></li>
-          <li><a href="/about">Sobre nosotros</a></li>
-          <li><a href="/contact">Contacto</a></li>
-        </ul>
+      <nav class="menu">
+        <div class="links-menu">
+          <a href="/">Inicio</a>
+          <a href="/about">Sobre nosotros</a>
+          <a href="">Productos <i class="bi bi-caret-down-square"></i></a>
+        </div>
+        <div class="search-bar">
+          <input type="text" name="text" placeholder="Search" />
+          <button class="search-btn">
+            <i class="bi bi-search"></i>
+          </button>
+        </div>
+        <div class="icons-menu">
+          <a href="#" class="chekout"><i class="bi bi-bag-fill"></i></a>
+          <a href="#" class="profile"><i class="bi bi-person-circle"></i></a>
+        </div>
       </nav>
 
-      <div class="search-bar">
-        <input type="text" placeholder="Producto..." />
+      <div class="burger-menu">
+        <i class="bi bi-list"></i>
       </div>
     </header>
     <!-- Content -->
     <main></main>
     <!-- Footer -->
     <footer></footer>
+    <script src="./js/app.js"></script>
   </body>
 </html>
