@@ -10,12 +10,6 @@ body {
   padding: 0;
 }
 
-.alt-font-kaushan {
-  font-family: "Kaushan Script", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
 .alt-font-knewave {
   font-family: "Knewave", sans-serif;
   font-weight: 400;
@@ -27,11 +21,22 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  gap: 10px;
+  gap: 30px;
   background-color: #ffb770;
   margin: 0;
-  padding: 10px;
+  padding: 10px 20px;
   min-height: 70px;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo img {
+  width: 100px;
+  height: auto;
 }
 
 .menu {
@@ -62,7 +67,6 @@ body {
   padding: 10px;
   border-radius: 12px;
   font-family: "Knewave", sans-serif;
-  /* font-family: "Kaushan Script", sans-serif; */
   font-size: 1.4rem;
   min-width: 150px;
   height: 100%;
@@ -102,21 +106,6 @@ body {
   height: 100%;
 }
 
-/* Hover */
-
-.links-menu a:hover,
-.links-menu a:focus,
-.links-menu button:hover,
-.links-menu button:focus,
-.search-btn:focus,
-.search-btn:hover,
-.icons-menu a:hover,
-.icons-menu a:focus,
-.icons-menu button:hover,
-.icons-menu button:focus {
-  background-color: #db9e60;
-}
-
 .icons-menu a,
 .icons-menu button {
   text-decoration: none;
@@ -141,6 +130,60 @@ body {
   cursor: pointer;
 }
 
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffb770;
+  padding: 10px 30px;
+  min-height: 70px;
+  font-size: 1.2rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-social {
+  display: flex;
+  gap: 30px;
+  font-size: 2em;
+}
+
+.footer-credits {
+  font-size: 0.75em;
+}
+
+.footer a,
+.footer button {
+  text-decoration: underline;
+  color: #000;
+}
+
+/* Hover */
+
+.links-menu a:hover,
+.links-menu a:focus,
+.links-menu button:hover,
+.links-menu button:focus,
+.search-btn:focus,
+.search-btn:hover,
+.icons-menu a:hover,
+.icons-menu a:focus,
+.icons-menu button:hover,
+.icons-menu button:focus {
+  background-color: #db9e60;
+}
+
+.footer a:hover,
+.footer a:focus,
+.footer button:hover,
+.footer button:focus {
+  color: #fff;
+}
+
 /* Responsive styles */
 
 @media (max-width: 1024px) {
@@ -160,7 +203,9 @@ body {
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 100px; /* Adjust based on your header height */
+    right: 0;
+    left: 0;
+    top: 110px; /* Adjust based on your header height */
     width: 100%;
     background-color: #ffb770;
     padding: 10px;
@@ -168,6 +213,7 @@ body {
 
   .links-menu {
     flex-direction: column;
+    width: 300px;
   }
 
   .search-bar {

@@ -1,0 +1,39 @@
+.brand {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 40px 0;
+  background-color: #c2e3ec;
+}
+
+.brand-title img {
+  width: 500px;
+  height: auto;
+}
+
+.featured-prod {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 40px 20px;
+  gap: 20px;
+  background-color: #89c0cf;
+}
+
+.prod-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #589aac;
+  padding: 10px;
+  border-radius: 12px;
+  min-height: 200px;
+}
+
+.prod-item img {
+  width: 30vh;
+  height: auto;
+  align-self: center;
+}
