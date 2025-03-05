@@ -1,0 +1,35 @@
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.brand {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 40px;
+  background-color: #c2e3ec;
+  gap: 30px;
+  width: calc(100% - 60px);
+}
+
+.brand > img {
+  width: 50%;
+  height: auto;
+  padding: 30px;
+}
+
+.brand-contents {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.reversed {
+  flex-direction: row-reverse;
+  background-color: #89c0cf;
+}

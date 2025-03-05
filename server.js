@@ -35,6 +35,10 @@ app.get("/contact", (req, res) => {
 });
 
 // Post
+app.post("/contact-form", (req, res) => {
+  console.log(req.body);
+  res.sendFile(path.join(__dirname, "public", "contact.html"));
+});
 
 // Start Server
 app.listen(PORT, () => {
