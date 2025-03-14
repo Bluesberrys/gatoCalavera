@@ -34,3 +34,17 @@ main {
   flex-direction: row-reverse;
   background-color: #89c0cf;
 }
+
+@media screen and (max-width: 780px) {
+  .brand {
+    flex-direction: column;
+  }
+
+  .brand > img {
+    width: 80%;
+  }
+
+  .brand-contents {
+    width: 80%;
+  }
+}

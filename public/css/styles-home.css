@@ -37,3 +37,19 @@
   height: auto;
   align-self: center;
 }
+
+@media screen and (max-width: 1024px) {
+  .brand {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .brand img {
+    width: 90%;
+  }
+  .brand-title img {
+    width: 80%;
+  }
+  .featured-prod {
+    flex-direction: column;
+  }
+}
