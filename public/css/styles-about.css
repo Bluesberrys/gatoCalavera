@@ -14,7 +14,8 @@ main {
   padding: 40px;
   background-color: #c2e3ec;
   gap: 30px;
-  width: calc(100% - 60px);
+  width: calc(100% - 80px);
+  font-size: 1.5rem;
 }
 
 .brand > img {
