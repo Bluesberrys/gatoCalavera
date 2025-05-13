@@ -1,0 +1,26 @@
+<!-- Brand showcase-->
+<div class="brand">
+  <img src="./imgs/gatoCalaveraIcon.svg" class="brand-img" alt="" />
+  <div class="brand-title">
+    <h2>Somos</h2>
+    <img src="./imgs/gatoCalaveraText.svg" alt="" />
+    <p>Diseñadores de prendas casuales orientadas a personas de la comunidad furry mexicana</p>
+  </div>
+</div>
+<!-- Featured products -->
+<div class="featured-prod">
+  <div class="featured-prod-title">
+    <h2 class="alt-font">Productos destacados</h2>
+    <p>Estos son algunos de nuestros productos más populares</p>
+  </div>
+  <% if (featured && featured.length > 0) { %> <% featured.forEach(product => { %>
+  <div class="prod-item">
+    <img src="./imgs/<%= product.image %>" alt="" />
+    <div class="prod-item-info">
+      <h3 class="alt-font"><%= product.title %></h3>
+      <p><%= product.description %></p>
+    </div>
+  </div>
+  <% }); %> <% } %>
+</div>
+<!--  -->

@@ -1,0 +1,24 @@
+{
+  "featured": [
+    {
+      "title": "Mictlan",
+      "description": "Inspirado en tradiciones mexicanas de día de muertos.",
+      "image": "products/print_mictlan.jpg"
+    },
+    {
+      "title": "Fight Bite",
+      "description": "Colaboración con el juego Friends VS Friends.",
+      "image": "products/print_FightBite.jpg"
+    },
+    {
+      "title": "HienaYeen",
+      "description": "Yeen.",
+      "image": "products/print3.jpg"
+    },
+    {
+      "title": "Andre",
+      "description": "Cabra.",
+      "image": "products/print_andre.jpg"
+    }
+  ]
+}

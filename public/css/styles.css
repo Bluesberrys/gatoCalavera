@@ -3,6 +3,7 @@
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+  margin: 0;
 }
 
 body {
@@ -248,7 +249,6 @@ body {
   }
 
   .footer-social {
-    flex-direction: column;
-    gap: 10px;
+    gap: 30px;
   }
 }
