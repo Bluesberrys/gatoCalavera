@@ -13,7 +13,8 @@
     <h2 class="alt-font">Productos destacados</h2>
     <p>Estos son algunos de nuestros productos más populares</p>
   </div>
-  <% if (featured && featured.length > 0) { %> <% featured.forEach(product => { %>
+  <% if (featured && featured.length > 0) { %>
+  <% featured.forEach(product => { %>
   <div class="prod-item">
     <img src="./imgs/<%= product.image %>" alt="" />
     <div class="prod-item-info">
@@ -21,6 +22,7 @@
       <p><%= product.description %></p>
     </div>
   </div>
-  <% }); %> <% } %>
+  <% }); %>
+  <% } %>
 </div>
 <!--  -->

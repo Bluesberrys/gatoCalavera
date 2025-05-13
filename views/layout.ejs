@@ -1,69 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%= title %> - Gato calavera</title>
-    <link rel="icon" href="./imgs/gatoCalaveraIcon.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Knewave&family=Urbanist:wght@100..900&display=swap" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
-    <% if (cssFiles && cssFiles.length) {%> <% cssFiles.forEach((cssFile) => { %>
-    <link rel="stylesheet" href="./css/<%= cssFile %>" />
-    <% }) %> <% } %>
-  </head>
-  <body>
-    <!-- Header -->
-    <header class="header">
-      <div class="logo">
-        <a href="/">
-          <img src="./imgs/gatoCalaveraIcon.svg" alt="Wonejo Rosa Logo" />
-        </a>
-      </div>
+<html lang="es">
 
-      <nav class="menu">
-        <div class="links-menu">
-          <a href="/">Inicio</a>
-          <a href="#">Productos <i class="bi bi-caret-down-square"></i></a>
-        </div>
-        <div class="search-bar">
-          <input type="text" name="text" placeholder="Search" />
-          <button class="search-btn">
-            <i class="bi bi-search"></i>
-          </button>
-        </div>
-        <div class="icons-menu">
-          <a href="#" class="chekout"><i class="bi bi-bag-fill"></i></a>
-          <a href="#" class="profile"><i class="bi bi-person-circle"></i></a>
-        </div>
-      </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title><%- title %> - Gato calavera</title>
+  <link rel="icon" href="./imgs/gatoCalaveraIcon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Knewave&family=Urbanist:wght@100..900&display=swap" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="./css/styles.css" />
+  <% if (cssFiles && cssFiles.length) {%>
+  <% cssFiles.forEach((cssFile) => { %>
+  <link rel="stylesheet" href="./css/<%= cssFile %>" />
+  <% }) %>
+  <% } %>
+</head>
 
-      <div class="burger-menu">
-        <i class="bi bi-list"></i>
-      </div>
-    </header>
-    <!-- Content -->
-    <main><%- content %></main>
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="footer-links">
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">
+      <a href="/">
+        <img src="./imgs/gatoCalaveraIcon.svg" alt="Wonejo Rosa Logo" />
+      </a>
+    </div>
+
+    <nav class="menu">
+      <div class="links-menu">
         <a href="/">Inicio</a>
-        <a href="/about">Sobre nosotros</a>
-        <a href="/contact">Contacto</a>
+        <a href="#">Productos <i class="bi bi-caret-down-square"></i></a>
       </div>
-      <div class="footer-social">
-        <a href="#"><i class="bi bi-facebook"></i></a>
-        <a href="#"><i class="bi bi-instagram"></i></a>
-        <a href="#"><i class="bi bi-twitter"></i></a>
+      <div class="search-bar">
+        <input type="text" name="text" placeholder="Search" />
+        <button class="search-btn">
+          <i class="bi bi-search"></i>
+        </button>
       </div>
-      <div class="footer-credits">
-        <p>&copy; 2025 Gato Calavera. Todos los derechos reservados.</p>
+      <div class="icons-menu">
+        <a href="#" class="chekout"><i class="bi bi-bag-fill"></i></a>
+        <a href="#" class="profile"><i class="bi bi-person-circle"></i></a>
       </div>
-    </footer>
-  </body>
+    </nav>
+
+    <div class="burger-menu">
+      <i class="bi bi-list"></i>
+    </div>
+  </header>
+  <!-- Content -->
+  <main>
+    <%- content %>
+  </main>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="/">Inicio</a>
+      <a href="/about">Sobre nosotros</a>
+      <a href="/contact">Contacto</a>
+    </div>
+    <div class="footer-social">
+      <a href="#"><i class="bi bi-facebook"></i></a>
+      <a href="#"><i class="bi bi-instagram"></i></a>
+      <a href="#"><i class="bi bi-twitter"></i></a>
+    </div>
+    <div class="footer-credits">
+      <p>&copy; 2025 Gato Calavera. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+</body>
+
 </html>

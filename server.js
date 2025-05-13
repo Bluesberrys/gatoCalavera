@@ -39,15 +39,13 @@ async function readJson(filePath) {
 
 // Render page
 async function renderPage(contentViewPath, { title, cssFiles = [], data = {} }) {
-  const baseCss = ["styles.css"];
-  const allCss = Array.from(new Set([...baseCss, ...cssFiles]));
-  const contentHtml = await ejs.renderFile(contentViewPath, data);
-  const fullHtml = await ejs.renderFile(path.join(__dirname, "views", "layout.ejs"), {
+  const content = await ejs.renderFile(contentViewPath, data);
+  const fullFile = await ejs.renderFile(path.join(__dirname, "views", "layout.ejs"), {
     title,
-    cssFiles: allCss,
-    content: contentHtml,
+    cssFiles: cssFiles,
+    content: content,
   });
-  return fullHtml;
+  return fullFile;
 }
 
 // Routes
