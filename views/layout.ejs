@@ -30,7 +30,15 @@
     <nav class="menu">
       <div class="links-menu">
         <a href="/">Inicio</a>
-        <a href="#">Productos <i class="bi bi-caret-down-square"></i></a>
+        <a href="#" class="" id="products-link">Productos <i class="bi bi-caret-down-square"></i></a>
+        <div class="dropdown-menu" id="products-dropdown">
+          <ul>
+            <li><a href="#">Category 1</a></li>
+            <li><a href="#">Category 2</a></li>
+            <li><a href="#">Category 3</a></li>
+            <!-- Add more categories as needed -->
+          </ul>
+        </div>
       </div>
       <div class="search-bar">
         <input type="text" name="text" placeholder="Search" />
@@ -39,8 +47,15 @@
         </button>
       </div>
       <div class="icons-menu">
-        <a href="#" class="chekout"><i class="bi bi-bag-fill"></i></a>
+        <a href="#" class="chekout" id="cart-button"><i class="bi bi-bag-fill"></i></a>
         <a href="#" class="profile"><i class="bi bi-person-circle"></i></a>
+      </div>
+      <div id="cart-sidebar" class="sidebar">
+        <div class="sidebar-content">
+          <h2>Your Cart</h2>
+          <!-- Cart items will be dynamically added here -->
+          <button id="close-cart">Close</button>
+        </div>
       </div>
     </nav>
 
@@ -77,6 +92,21 @@
       burgerMenu.addEventListener("click", function() {
         menu.classList.toggle("active");
       });
+    });
+
+    document.getElementById('cart-button').addEventListener('click', function(event) {
+      event.preventDefault();
+      document.getElementById('cart-sidebar').classList.toggle('active');
+    });
+    document.getElementById('close-cart').addEventListener('click', function() {
+      document.getElementById('cart-sidebar').classList.remove('active');
+    });
+    // Optional: Close the dropdown when clicking outside
+    document.addEventListener('click', function(event) {
+      const dropdown = document.getElementById('products-dropdown');
+      if (!event.target.matches('#products-link')) {
+        dropdown.style.display = 'none';
+      }
     });
   </script>
 </body>

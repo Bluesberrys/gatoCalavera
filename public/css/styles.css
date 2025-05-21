@@ -252,3 +252,50 @@ body {
     gap: 30px;
   }
 }
+
+/* Sidebar Styles */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -300px; /* Hide off-screen */
+  width: 300px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+  transition: right 0.3s ease;
+  z-index: 1000;
+}
+.sidebar.active {
+  right: 0; /* Show sidebar */
+}
+
+.dropdown-menu {
+  display: none; /* Hidden by default */
+  position: absolute; /* Position it absolutely */
+  top: 100%; /* Position it below the products link */
+  left: 0; /* Align to the left of the products link */
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  width: 200px; /* Set a width for the dropdown */
+}
+.products:hover + .dropdown-menu,
+.dropdown:hover .dropdown-menu {
+  display: block; /* Show on hover */
+}
+/* Optional: Style for the dropdown items */
+.dropdown-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.dropdown-menu li {
+  padding: 10px;
+}
+.dropdown-menu li a {
+  text-decoration: none;
+  color: #000;
+}
+.dropdown-menu li:hover {
+  background-color: #f0f0f0; /* Highlight on hover */
+}
